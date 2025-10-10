@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetellAI Chat Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="chat-header">
+      <h1>🤖 RetellAI Chat Test</h1>
+      <p>Phase 3 Development Interface</p>
+    </div>
+
+    <div class="chat-container">
+      <div id="chatMessages" class="chat-messages">
+        <div class="system-message">
+          Click "Start Chat" to begin conversation with your RetellAI agent
+        </div>
+      </div>
+
+      <div class="chat-input-container">
+        <input 
+          type="text" 
+          id="messageInput" 
+          placeholder="Type your message..." 
+          disabled
+        >
+        <button id="sendButton" disabled>Send</button>
+      </div>
+
+      <div class="chat-controls">
+        <button id="startButton" class="control-btn start">Start Chat</button>
+        <button id="endButton" class="control-btn end" disabled>End Chat</button>
+        <span id="statusIndicator" class="status">Not Connected</span>
+      </div>
+    </div>
+
+    <div class="debug-info">
+      <details>
+        <summary>Debug Info</summary>
+        <div id="debugInfo">
+          <p><strong>Chat ID:</strong> <span id="debugChatId">None</span></p>
+          <p><strong>Status:</strong> <span id="debugStatus">Idle</span></p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
